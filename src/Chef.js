@@ -1,17 +1,16 @@
 class Chef {
-  constructor(name, restaurant) {
+  constructor(name, foodPlace) {
 this.name = name;
-this.restaurant = restaurant;
+this.restaurant = foodPlace;
   }
   //methods
   greetCustomer(name, morning){
-    if (morning === true){
+    if (morning){
     return `Good morning, ${name}!`
   }
     return `Hello, ${name}!`
   }
   checkForFood(foodItem){
-
     if (restaurant.menus[foodItem.type].includes(foodItem)){
 return `Yes, we're serving ${foodItem.name} today!`;
     }
