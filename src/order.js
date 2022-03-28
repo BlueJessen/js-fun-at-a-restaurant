@@ -13,19 +13,23 @@ function refundOrder(order,orderGroup){
     }
   }
 }
+// function listItems(orders){
+//   var list = [];
+//   for (var i=0; i<orders.length; i++){
+//     list.push(orders[i].item);
+//   }
+//   return list.join(', ');
+// }
+
 function listItems(orders){
-  var list = [];
-  for (var i=0; i<orders.length; i++){
-    list.push(orders[i].item);
-  }
-  return list.join(', ');
+console.log(orders.filter(orders.item));
 }
 
 function searchOrder(orders,item){
   for (var i = 0; i<orders.length; i++){
     if(orders[i].item === item){
       return true
-    }
+        }
     }
     return false;
 }

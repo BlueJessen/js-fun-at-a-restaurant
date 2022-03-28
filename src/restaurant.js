@@ -1,25 +1,32 @@
 
 function createRestaurant(restaurantInfo){
-  return restaurant = {name: restaurantInfo,
+  return {name: restaurantInfo,
                       menus: {breakfast:[],lunch:[], dinner:[]},
                       };
               }
+//
+// function addMenuItem(restaurant,menuItem){
+//   //if menu item is breakfast
+//   if (menuItem.type === "breakfast" &&
+//           !restaurant.menus.breakfast.includes(menuItem)){
+//     restaurant.menus.breakfast.push(menuItem);
+//     //menu item is lunch
+//   }else if (menuItem.type === "lunch" &&
+//                 !restaurant.menus.lunch.includes(menuItem)){
+//         restaurant.menus.lunch.push(menuItem);
+//         //menu item is dinner
+//       }else if (menuItem.type === "dinner" &&
+//                   !restaurant.menus.dinner.includes(menuItem)){
+//           restaurant.menus.dinner.push(menuItem);
+//   }
+//   }
 
-function addMenuItem(restaurant,menuItem){
-  //if menu item is breakfast
-  if (menuItem.type === "breakfast" &&
-          !restaurant.menus.breakfast.includes(menuItem)){
-    restaurant.menus.breakfast.push(menuItem);
-    //menu item is lunch
-  }else if (menuItem.type === "lunch" &&
-                !restaurant.menus.lunch.includes(menuItem)){
-        restaurant.menus.lunch.push(menuItem);
-        //menu item is dinner
-      }else if (menuItem.type === "dinner" &&
-                  !restaurant.menus.dinner.includes(menuItem)){
-          restaurant.menus.dinner.push(menuItem);
+  function addMenuItem(restaurant, menuItem){
+    if(!restaurant.menus[menuItem.type].includes(menuItem)){
+      restaurant.menus[menuItem.type].push(menuItem);
+    }
   }
-  }
+
 //buggy V  need to figure out how to access the array within the an
 //object cleanly.
 // function removeMenuItem(restaurant,menuItem,type){
